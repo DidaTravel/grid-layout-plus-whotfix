@@ -21,7 +21,7 @@
     "postpublish": "pinst --enable",
     "publish:ci": "tsx scripts/publish.ts",
     "release": "tsx scripts/release.ts",
-    "release:dry": "tsx scripts/release.ts --dry",
+    "release:dida": "node scripts/dida-release.mjs",
     "test": "vitest run",
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev"
