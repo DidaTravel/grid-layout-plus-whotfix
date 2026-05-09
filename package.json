@@ -14,13 +14,14 @@
     "lint": "eslint --cache \"**/*.{js,cjs,mjs,ts,tsx,vue}\"",
     "lint:style": "stylelint --cache \"**/*.{vue,scss}\"",
     "precommit": "lint-staged -c ./.husky/.lintstagedrc -q",
-    "prepare": "is-ci || husky init",
+    "prepare": "husky",
     "prepublishOnly": "pinst --disable",
     "prettier": "prettier --write \"{src,dev-server,docs}/**/*.{ts,js,json,css,pcss,scss,vue,html,md}\"",
     "prettier:scripts": "prettier --write \"scripts/**/*.{ts,js,json}\"",
     "postpublish": "pinst --enable",
     "publish:ci": "tsx scripts/publish.ts",
     "release": "tsx scripts/release.ts",
+    "release:dida": "node scripts/dida-release.mjs",
     "test": "vitest run",
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev"
@@ -150,5 +151,9 @@
     "patchedDependencies": {
       "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch"
     }
+  },
+  "volta": {
+    "pnpm": "9.14.2",
+    "node": "22.22.2"
   }
 }
